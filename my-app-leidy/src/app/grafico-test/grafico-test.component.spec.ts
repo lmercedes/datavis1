@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GraficoTestComponent } from './grafico-test.component';
+import { NvD3Module } from 'ng2-nvd3';
+
 
 describe('GraficoTestComponent', () => {
   let component: GraficoTestComponent;
@@ -8,7 +10,8 @@ describe('GraficoTestComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GraficoTestComponent ]
+      declarations: [ GraficoTestComponent ],
+      imports: [ NvD3Module ]
     })
     .compileComponents();
   }));

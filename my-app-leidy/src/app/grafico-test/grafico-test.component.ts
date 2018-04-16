@@ -1,11 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { NvD3Component } from 'ng2-nvd3';
+import 'd3';
+import 'nvd3';
+
 declare let d3: any;
 
 
 @Component({
   selector: 'app-grafico-test',
   templateUrl: './grafico-test.component.html',
-  styleUrls: ['./grafico-test.component.css']
+  styleUrls: ['./grafico-test.component.css'],
+  encapsulation: ViewEncapsulation.None
+
 })
 export class GraficoTestComponent implements OnInit {
 

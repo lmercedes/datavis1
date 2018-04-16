@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { NvD3Component } from 'ng2-nvd3' ;
+import { NvD3Module } from 'ng2-nvd3';
+
+import { GraficoTestComponent } from './grafico-test/grafico-test.component';
+
 
 import 'd3';
 import 'nvd3';
-import { GraficoTestComponent } from './grafico-test/grafico-test.component';
 
 
 @NgModule({
@@ -16,8 +18,10 @@ import { GraficoTestComponent } from './grafico-test/grafico-test.component';
     GraficoTestComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NvD3Module
   ],
+  exports: [GraficoTestComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })
